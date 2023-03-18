@@ -136,7 +136,7 @@ public class ClienteGUI extends javax.swing.JFrame {
         else {
             ClienteDAO dao = new ClienteDAO();
             dao.adiciona(cliente);
-            JOptionPane.showMessageDialog(null, "Cliente " + jTextField1.getText()+ " inseriso com sucesso!");
+            JOptionPane.showMessageDialog(null, "Cliente " + jTextField1.getText()+ " inserido com sucesso!");
         }
         
         jTextField1.setText("");
