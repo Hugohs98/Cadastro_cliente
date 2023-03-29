@@ -22,11 +22,12 @@ public class ClienteDAO {
     }
     
     public void adiciona(Cliente cliente) {
-        String sql = "INSERT INTO cliente(cli_nome, cli_cpf) VALUES(?, ?)";
+        String sql = "INSERT INTO cliente(cli_nome, cli_cpf, cli_telefone) VALUES(?, ?, ?)";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, cliente.getNome());
             stmt.setInt(2, cliente.getCpf());
+            stmt.setInt(3, cliente.getTelefone());
             stmt.execute();
             stmt.close();
         }
